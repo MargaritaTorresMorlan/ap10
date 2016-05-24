@@ -14,10 +14,10 @@ $(document).ready(function(e) {
 		audio.preloadFX ('si','audio/SI.mp3',function(){},function(e){alert('Error'+e);});
 		
 		$('.nota').bind('touchstart',function(){
-			$(this).addclass('tocada');
+			$(this).addClass('tocada');
 			audio.play($(this).attr('id'));
 			
-		}).bind('touchstart',function(){
+		}).bind('touchend',function(){
 			$(this).removeClass('tocada');
 		});
 		
